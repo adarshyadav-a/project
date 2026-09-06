@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .box{
+            border: 2px solid;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.184);
+            border-radius: 10px;
+        }
+        #input{
+
+            margin: 10px;
+            width: 85%;
+            height: 30px;
+            font-size: large;
+            border: 2px solid;
+            border-radius: 5px;
+            background-color:antiquewhite;
+             text-align-last:right;
+             text
+              }
+
+        .but{
+            flex-wrap:wrap ;
+            display:flex ;
+            justify-content:center;
+        
+        }
+        .butt{
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            background-color: beige;
+            border-radius: 5px;
+            font-size:larger;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="box">
+        <input type="text" id="input" readonly placeholder="hey hi 🙋‍♂️">
+        <div class="but">
+        <button class="butt" onclick="currentDisplay=currentDisplay+'1'
+         document.querySelector('#input').value=currentDisplay; ">1</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'2'
+         document.querySelector('#input').value=currentDisplay; ">2</button>
+
+        <button class="butt" onclick="currentDisplay =''
+         document.querySelector('#input').value=currentDisplay;">c</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'3'
+         document.querySelector('#input').value=currentDisplay; ">3</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'4'
+         document.querySelector('#input').value=currentDisplay; ">4</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'/'
+         document.querySelector('#input').value=currentDisplay; ">/</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'5'
+         document.querySelector('#input').value=currentDisplay; ">5</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'6'
+         document.querySelector('#input').value=currentDisplay; ">6</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'*'
+         document.querySelector('#input').value=currentDisplay; ">*</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'7'
+         document.querySelector('#input').value=currentDisplay; ">7</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'8'
+         document.querySelector('#input').value=currentDisplay; ">8</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'+'
+         document.querySelector('#input').value=currentDisplay; ">+</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'9'
+         document.querySelector('#input').value=currentDisplay; ">9</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'0'
+         document.querySelector('#input').value=currentDisplay; ">0</button>
+
+        <button class="butt"  onclick="currentDisplay=currentDisplay+'-'
+         document.querySelector('#input').value=currentDisplay; ">-</button>
+
+        <button class="butt"  onclick=" 
+
+        currentDisplay=currentDisplay+'.'
+         document.querySelector('#input').value=currentDisplay; ">.</button>
+
+        <button class="butt"  onclick="
+        
+         currentDisplay=eval(currentDisplay);
+         document.querySelector('#input').value=currentDisplay; 
+         currentDisplay=''">=</button>
+         <button class="butt" onclick="deleteNumber()">⌫</button>
+
+        </div>
+
+    </div>
+  
+    <script>
+        let currentDisplay='';
+        document.querySelector('#input').value=currentDisplay;
+
+        function deleteNumber() {
+    let display = document.getElementById("input");
+    display.value = display.value.slice(0, -1);
+}
+        
+    </script>
+    
+</body>
+</html>
